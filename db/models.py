@@ -1,8 +1,4 @@
-import datetime
-
 from django.db import models
-from django.db.models import DO_NOTHING
-from django.db.models.fields import CharField
 
 
 class Race(models.Model):

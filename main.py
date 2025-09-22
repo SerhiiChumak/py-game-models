@@ -20,7 +20,7 @@ def main() -> None:
             defaults={"description": race_description or ""}
         )
         if (not race_created and race.description is not None and
-            race.description != race_description):
+                race.description != race_description):
             race.description = race_description
             race.save()
         for skill_info in skills:
@@ -54,7 +54,7 @@ def main() -> None:
                 defaults={"description": guild_description}
             )
             if (not guild_created and guild_description is not None
-                and guild.description != guild_description):
+                    and guild.description != guild_description):
                 guild.description = guild_description
                 guild.save()
 
@@ -82,6 +82,7 @@ def main() -> None:
                 changed = True
             if changed:
                 player.save()
+
 
 if __name__ == "__main__":
     main()
