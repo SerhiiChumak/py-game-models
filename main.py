@@ -19,8 +19,8 @@ def main() -> None:
             name=race_name,
             defaults={"description": race_description or ""}
         )
-        if (not race_created and race.description is not None and
-                race.description != race_description):
+        if (not race_created and race.description is not None
+                and race.description != race_description):
             race.description = race_description
             race.save()
         for skill_info in skills:
