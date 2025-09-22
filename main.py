@@ -77,7 +77,7 @@ def main() -> None:
             if player.race_id != race.id:
                 player.race = race
                 changed = True
-            if player.guild_id != guild.id and guild is not None:
+            if guild is not None and player.guild_id != guild.id:
                 player.guild = guild
                 changed = True
             if changed:
